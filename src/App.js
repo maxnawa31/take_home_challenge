@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Main from './Main'
+import Main from './containers/Main'
 import { Provider } from 'react-redux';
 import configureStore from './store'
 const store = configureStore();
