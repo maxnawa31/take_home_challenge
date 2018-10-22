@@ -1,9 +1,16 @@
-import { LOAD_DATA, TOGGLE_PICKUP, TOGGLE_PROMO, DEFAULT } from '../actionTypes';
+import {
+  LOAD_DATA,
+  TOGGLE_PICKUP,
+  TOGGLE_PROMO,
+  DEFAULT
+} from '../actionTypes';
 
-export const loadData = data => ({
-  type: LOAD_DATA,
-  data
-});
+export function loadData(data) {
+  return {
+    type: LOAD_DATA,
+    data
+  };
+}
 
 export function togglePromo(promoCode) {
   if (promoCode === 'DISCOUNT') {
@@ -15,6 +22,6 @@ export function togglePromo(promoCode) {
   }
 }
 
-export const togglePickup = (e) => ({
-  type: TOGGLE_PICKUP
-});
+export function togglePickup(e) {
+  return { type: TOGGLE_PICKUP };
+}

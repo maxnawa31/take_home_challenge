@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import calculatePrice, { newSubTotal } from '../store/selectors';
-import styled from 'styled-components';
-import {ProductDescriptionContainer, TextContainer, EstimatedTotal, StyledImageTag, StyledPTag, LineThroughPTag } from '../components/styled-components';
+import {
+  ProductDescriptionContainer,
+  TextContainer,
+  StyledImageTag,
+  StyledPTag,
+  LineThroughPTag
+} from '../components/styled-components';
 
 const ProductDescription = props => {
-  let { subTotal, description, url, newPrice, newSubTotal } = props;
+  let { subTotal, description, url, newSubTotal } = props;
   return (
     <ProductDescriptionContainer>
       <StyledImageTag src={`${url}`} alt="" />
       <TextContainer>
-        {subTotal !== newSubTotal ? (
-          <div>
-            <StyledPTag>${newSubTotal}</StyledPTag>
-            <LineThroughPTag>{subTotal}</LineThroughPTag>
-          </div>
-        ) : (
-          <StyledPTag>${subTotal}</StyledPTag>
-        )}
-
         <TextContainer>
           <StyledPTag>{description}</StyledPTag>
+          {subTotal !== newSubTotal ? (
+            <div>
+              <StyledPTag>${newSubTotal}</StyledPTag>
+              <LineThroughPTag>{subTotal}</LineThroughPTag>
+            </div>
+          ) : (
+            <StyledPTag>${subTotal}</StyledPTag>
+          )}
         </TextContainer>
       </TextContainer>
     </ProductDescriptionContainer>

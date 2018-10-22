@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   border: 1px solid black;
-  width: 20%;
+  width: 15%;
   height: 100%;
   padding-bottom: 5%;
   border-color: rgb(236, 237, 237);
   border-radius: 4%;
+  margin-left: 10%;
 `;
 
 export const TopPortion = styled.div`
@@ -42,12 +43,13 @@ export const TextContainer = styled.div`
 
 export const EstimatedTotal = styled.p`
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 10px;
 `;
 
 export const StyledPTag = styled.p`
   margin-bottom: 10px;
+  width: 150px;
 `;
 
 export const LineThroughPTag = styled.p`

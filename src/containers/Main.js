@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DATA from '../Data';
 import { loadData, togglePickup } from '../store/actions';
 import { connect } from 'react-redux';
-import ToggleComponent from './ToggleComponent';
+import ToggleComponent from '../components/ToggleComponent';
 import ApplyPromo from './ApplyPromo';
 import ProductDescription from './ProductDescription';
 import calculatePrice from '../store/selectors';
@@ -10,17 +10,11 @@ import {
   MainContainer,
   TopPortion,
   MiddlePortion,
-  BottomPortion
+  BottomPortion,
+  EstimatedTotal
 } from '../components/styled-components';
-import styled from 'styled-components';
+import { Tooltip, TooltipText } from '../components/Tooltip';
 import '../Tooltip.css';
-
-const EstimatedTotal = styled.p`
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
-`;
-
 class Main extends Component {
   componentDidMount() {
     this.props.loadData(DATA);
@@ -37,18 +31,24 @@ class Main extends Component {
       return (
         <MainContainer>
           <TopPortion>
-            <div>Subtotal: ${subTotal}</div>
-            <a className="tooltip" onClick={this.handleClick} href="">
+            <div>
+              Subtotal: <span style={{ fontWeight: 'bold' }}>${subTotal}</span>
+            </div>
+            <Tooltip handleClick={this.handleClick}>
               <p>
-                Pickup Savings: <span> -3.85</span>
+                Pickup Savings:{' '}
+                <span style={{ fontWeight: 'bold' }}> -3.85</span>
               </p>
-              <span className="tooltiptext">
-                Picking up your order in the store helps cut costs and we pass
-                the savings to you.
-              </span>
-            </a>
-
-            <div>Est. Taxes and Fees: {taxesAndFees}</div>
+              <TooltipText
+                description={
+                  'Picking up your order in the store helps cut costs and we pass the savings to you.'
+                }
+              />
+            </Tooltip>
+            <div>
+              Est. Taxes and Fees:{' '}
+              <span style={{ fontWeight: 'bold' }}>{taxesAndFees}</span>
+            </div>
           </TopPortion>
 
           <MiddlePortion>

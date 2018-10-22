@@ -1,15 +1,15 @@
 .tooltip {
     position: relative;
     display: block;
-    border-bottom: 1px  black; 
+    border-bottom: 1px  black;
     text-decoration: none;
     color: black;
 
 }
 
 .tooltip  p span {
-  color: red;
-  text-decoration: none;
+    color: red;
+    text-decoration: none;
 }
 
 .tooltip .tooltiptext {
@@ -32,7 +32,7 @@
 .tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
-    bottom: 100%;  
+    bottom: 100%;
     left: 20%;
     margin-left: -5px;
     border-width: 5px;
@@ -40,6 +40,3 @@
     border-color: transparent transparent black transparent;
 }
 
-.main-container {
-  border: 1px solid black;
-}
