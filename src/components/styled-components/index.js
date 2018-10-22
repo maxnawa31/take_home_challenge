@@ -61,3 +61,9 @@ export const StyledImageTag = styled.img`
   height: 50px;
   width: 50px;
 `;
+
+export const StyledATag = styled.a`
+  color: black;
+  text-decoration:none;
+
+`

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { StyledATag } from './styled-components/index';
 export default class ToggleComponent extends Component {
   constructor(props) {
     super(props);
@@ -24,9 +24,9 @@ export default class ToggleComponent extends Component {
         <div>
           {children}
           <div>
-            <a onClick={this.handleClick} href="">
+            <StyledATag onClick={this.handleClick} href="">
               {title} +
-            </a>
+            </StyledATag>
           </div>
         </div>
       );
@@ -35,9 +35,9 @@ export default class ToggleComponent extends Component {
       <div>
         {children}
         <div>
-          <a onClick={this.handleClick} href="">
+          <StyledATag onClick={this.handleClick} href="">
             {hideTitle} -
-          </a>
+          </StyledATag>
           <ToBeToggled />
         </div>
       </div>
