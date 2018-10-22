@@ -1,4 +1,4 @@
-import { LOAD_DATA, TOGGLE_PICKUP, TOGGLE_PROMO } from '../actionTypes';
+import { LOAD_DATA, TOGGLE_PICKUP, TOGGLE_PROMO, DEFAULT } from '../actionTypes';
 
 const defaultState = {
   pickup: false,
@@ -7,11 +7,13 @@ const defaultState = {
 const rootReducer = (state = defaultState, action) => {
   switch (action.type) {
     case LOAD_DATA:
-      return { ...action.data };
+      return { ...state, ...action.data };
     case TOGGLE_PICKUP:
       return { ...state, pickup: !state.pickup };
     case TOGGLE_PROMO:
       return { ...state, promo: !state.promo };
+    case DEFAULT:
+      return state
   }
 };
 

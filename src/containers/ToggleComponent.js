@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ProductDescription from './ProductDescription';
+
+
 export default class ToggleComponent extends Component {
   constructor(props) {
     super(props);
@@ -16,24 +17,30 @@ export default class ToggleComponent extends Component {
   };
 
   render() {
-    let { name } = this.props;
+    let { title, ToBeToggled, hideTitle, children } = this.props;
     let { active } = this.state;
 
     if (!active) {
       return (
         <div>
-          <a onClick={this.handleClick} href="">
-            {name} +
-          </a>
+          {children}
+          <div>
+            <a onClick={this.handleClick} href="">
+              {title} +
+            </a>
+          </div>
         </div>
       );
     }
     return (
       <div>
-        <a onClick={this.handleClick} href="">
-          {name} -
-        </a>
-        <ProductDescription/>
+        {children}
+        <div>
+          <a onClick={this.handleClick} href="">
+            {hideTitle} -
+          </a>
+          <ToBeToggled />
+        </div>
       </div>
     );
   }
