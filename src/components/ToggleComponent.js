@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyledATag } from './styled-components/index';
+
 export default class ToggleComponent extends Component {
   constructor(props) {
     super(props);

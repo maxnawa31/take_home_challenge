@@ -6,6 +6,7 @@ import {
   StyledButton,
   ApplyPromoText
 } from '../components/styled-components';
+
 class ApplyPromo extends Component {
   constructor(props) {
     super(props);
