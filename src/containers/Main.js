@@ -15,6 +15,7 @@ import {
 } from '../components/styled-components';
 import { Tooltip, TooltipText } from '../components/Tooltip';
 import '../Tooltip.css';
+
 class Main extends Component {
   componentDidMount() {
     this.props.loadData(DATA);
