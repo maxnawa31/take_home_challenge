@@ -1,9 +1,4 @@
-import {
-  LOAD_DATA,
-  TOGGLE_PICKUP,
-  TOGGLE_PROMO,
-  DEFAULT
-} from './actionTypes';
+import { LOAD_DATA, TOGGLE_PICKUP, TOGGLE_PROMO, DEFAULT } from './actionTypes';
 
 export function loadData(data) {
   return {

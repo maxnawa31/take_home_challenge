@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { togglePromo } from '../store/actions';
-import {StyledInput, StyledButton, ApplyPromoText} from '../components/styled-components';
+import {
+  StyledInput,
+  StyledButton,
+  ApplyPromoText
+} from '../components/styled-components';
 class ApplyPromo extends Component {
   constructor(props) {
     super(props);
@@ -17,13 +21,17 @@ class ApplyPromo extends Component {
     e.preventDefault();
     let { promoCode } = this.state;
     this.props.togglePromo(promoCode);
-    this.setState({promoCode: ''})
+    this.setState({ promoCode: '' });
   };
   render() {
     return (
       <form onSubmit={this.handleSubmit} action="">
         <ApplyPromoText>Apply Promo</ApplyPromoText>
-        <StyledInput onChange={this.handleChange} type="text" name="promoCode" />
+        <StyledInput
+          onChange={this.handleChange}
+          type="text"
+          name="promoCode"
+        />
         <StyledButton>Apply</StyledButton>
       </form>
     );

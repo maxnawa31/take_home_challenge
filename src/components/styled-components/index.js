@@ -48,9 +48,9 @@ export const EstimatedTotal = styled.p`
 `;
 
 export const DescriptionText = styled.p`
-width: 150px;
-margin-bottom: -10px;
-`
+  width: 150px;
+  margin-bottom: -10px;
+`;
 
 export const StyledPTag = styled.p`
   width: 150px;
@@ -81,14 +81,14 @@ export const StyledButton = styled.button`
   color: black;
   margin-left: 5%;
   font-weight: bold;
-  outline:none;
-`
+  outline: none;
+`;
 
 export const ApplyPromoText = styled.p`
   color: black;
   margin-bottom: -1px;
-`
+`;
 export const StyledInput = styled.input`
-  outline:none;
+  outline: none;
   height: 20px;
-`
+`;

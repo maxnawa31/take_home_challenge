@@ -5,14 +5,14 @@ const promoSelector = state => state.promo;
 const pickupSelector = state => state.pickup;
 const taxesAndFeesSelector = state => state.taxesAndFees;
 
-const calculateNewSubTotal = (subTotal,pickup) => {
+const calculateNewSubTotal = (subTotal, pickup) => {
   let newPrice = subTotal;
-  if(pickup) {
-    return parseFloat((newPrice - newPrice * (3.8/100)).toFixed(2));
-  }else {
-    return newPrice
+  if (pickup) {
+    return parseFloat((newPrice - newPrice * (3.8 / 100)).toFixed(2));
+  } else {
+    return newPrice;
   }
-}
+};
 const calculateNewPrice = (subTotal, promo, pickup, taxesAndFees) => {
   let newPrice = subTotal + taxesAndFees;
   if (promo && pickup) {
@@ -34,4 +34,8 @@ export default createSelector(
   calculateNewPrice
 );
 
-export const newSubTotal = createSelector(priceSelector, pickupSelector, calculateNewSubTotal);
+export const newSubTotal = createSelector(
+  priceSelector,
+  pickupSelector,
+  calculateNewSubTotal
+);
