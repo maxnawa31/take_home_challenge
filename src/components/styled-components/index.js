@@ -9,6 +9,9 @@ export const MainContainer = styled.div`
   border-radius: 4%;
   margin-left: 10%;
   padding-top: 1%;
+  @media (max-width: 700px) {
+    width: 65%;
+  }
 `;
 
 export const TopPortion = styled.div`
@@ -91,4 +94,5 @@ export const ApplyPromoText = styled.p`
 export const StyledInput = styled.input`
   outline: none;
   height: 20px;
+  border: 1px solid black;
 `;
