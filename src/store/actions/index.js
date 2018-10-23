@@ -3,7 +3,7 @@ import {
   TOGGLE_PICKUP,
   TOGGLE_PROMO,
   DEFAULT
-} from '../actionTypes';
+} from './actionTypes';
 
 export function loadData(data) {
   return {
