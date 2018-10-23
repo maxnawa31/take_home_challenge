@@ -3,10 +3,10 @@ Setup
 
 1) Clone this repository.
 
-2) Install required npm libraries::
+2) Install required npm libraries:
 
-     $ npm install
+    $ npm install
 
-3) Start WebPack::
+3) Start WebPack:
 
-     $ npm start
+    $ npm start
