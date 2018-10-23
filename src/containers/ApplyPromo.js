@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { togglePromo } from '../store/actions';
+import {StyledInput, StyledButton, ApplyPromoText} from '../components/styled-components';
 class ApplyPromo extends Component {
   constructor(props) {
     super(props);
@@ -21,8 +22,9 @@ class ApplyPromo extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} action="">
-        <input onChange={this.handleChange} type="text" name="promoCode" />
-        <button>Apply</button>
+        <ApplyPromoText>Apply Promo</ApplyPromoText>
+        <StyledInput onChange={this.handleChange} type="text" name="promoCode" />
+        <StyledButton>Apply</StyledButton>
       </form>
     );
   }

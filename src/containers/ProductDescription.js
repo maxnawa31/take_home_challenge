@@ -6,7 +6,8 @@ import {
   TextContainer,
   StyledImageTag,
   StyledPTag,
-  LineThroughPTag
+  LineThroughPTag,
+  DescriptionText
 } from '../components/styled-components';
 
 const ProductDescription = props => {
@@ -16,7 +17,7 @@ const ProductDescription = props => {
       <StyledImageTag src={`${url}`} alt="" />
       <TextContainer>
         <TextContainer>
-          <StyledPTag>{description}</StyledPTag>
+          <DescriptionText>{description}</DescriptionText>
           {subTotal !== newSubTotal ? (
             <div>
               <StyledPTag>${newSubTotal}</StyledPTag>

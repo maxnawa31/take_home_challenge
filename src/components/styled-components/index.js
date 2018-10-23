@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
   border-color: rgb(236, 237, 237);
   border-radius: 4%;
   margin-left: 10%;
+  padding-top: 1%;
 `;
 
 export const TopPortion = styled.div`
@@ -29,7 +30,6 @@ export const BottomPortion = styled.div`
   padding-bottom: 10px;
 `;
 
-
 export const ProductDescriptionContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -47,9 +47,15 @@ export const EstimatedTotal = styled.p`
   margin-bottom: 10px;
 `;
 
+export const DescriptionText = styled.p`
+width: 150px;
+margin-bottom: -10px;
+`
+
 export const StyledPTag = styled.p`
-  margin-bottom: 10px;
   width: 150px;
+  font-weight: bold;
+  margin-bottom: -8px;
 `;
 
 export const LineThroughPTag = styled.p`
@@ -58,12 +64,31 @@ export const LineThroughPTag = styled.p`
 `;
 
 export const StyledImageTag = styled.img`
+  margin-top: 2px;
   height: 50px;
   width: 50px;
 `;
 
 export const StyledATag = styled.a`
   color: black;
-  text-decoration:none;
+  text-decoration: none;
+`;
 
+export const StyledButton = styled.button`
+  height: 30px;
+  border-radius: 25%;
+  border: 2px solid black;
+  color: black;
+  margin-left: 5%;
+  font-weight: bold;
+  outline:none;
+`
+
+export const ApplyPromoText = styled.p`
+  color: black;
+  margin-bottom: -1px;
+`
+export const StyledInput = styled.input`
+  outline:none;
+  height: 20px;
 `
